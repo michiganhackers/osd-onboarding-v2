@@ -1,0 +1,9 @@
+# Mac stuff
+.DS_Store
+*.dSYM
+
+# Output files
+*.log
+*.out
+welcome
+welcome_debug

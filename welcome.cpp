@@ -1,4 +1,5 @@
 #include <iostream>
+#include "sort.h"
 
 int fib(int n) {
     if (n == 0 || n == 1) {
@@ -42,4 +43,10 @@ int main(int argc, char *argv[]) {
     // Why is this so slow...
     // TODO: make it go faster
     std::cout << "fib(42) = " << fib(42) << std::endl;
+
+    int arr[] = {5, 3, 9, 8, 3};
+    // Why is it printing weird things...
+    std::cout << "Sorting " << arr << "...\n";
+    my_sort(arr, 5);
+    std::cout << "Sorted: " << arr << std::endl;
 }

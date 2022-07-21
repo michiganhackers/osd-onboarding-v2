@@ -1,11 +1,16 @@
 CC=g++
 PROJ=welcome
+Que=paneraQueue
 
-release: $(PROJ).cpp
-	$(CC) -O2 -o $(PROJ) -std=c++17 $+
+release: $(PROJ).cpp $(Que).cpp
+	$(CC) -O2 -o program -std=c++17 $+
 
-debug: $(PROJ).cpp
+debug: $(PROJ).cpp $(Que).cpp
 	$(CC) -g -o $(PROJ)_$@ -std=c++17 $+
+	$(CC) -g -o $(Que)_$@ -std=c++17 $+
 
 clean:
-	rm -v $(PROJ) $(PROJ)_debug
+	rm -v program
+	rm -v *.o
+	rm -v *_debug
+

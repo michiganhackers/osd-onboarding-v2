@@ -13,6 +13,10 @@ Welcome to the Open Source Development team! This is our onboarding project, whi
     - [Linux](#linux)
   - [Add SSH key to GitHub](#add-ssh-key-to-github)
 - [Working on the onboarding project](#working-on-the-onboarding-project)
+- [Tips](#tips)
+  - [Makefile](#makefile)
+  - [Some useful Git commands](#some-useful-git-commands)
+- [Recommended reading (Optional)](#recommended-reading-optional)
 - [License](#license)
 
 ## Getting started
@@ -95,14 +99,46 @@ There are many things you can do with the onboarding project. At minimum, you sh
 
 You may also:
 
-- Fix an existing issue, and submit a PR.
+- Fix an existing issue, improve existing code, or add a new feature. Then, submit a PR with your changes.
 - Find an issue in the existing codebase, and report it by creating a new Issue.
-- Take a look at other people's Pull Requests (PR), and review their code.
+- Take a look at other people's PRs, and review their code.
   - If you'd like to do this, ask a lead to add you as a reviewer to a PR.
   - You can approve, request changes, or add comments to the PR.
   - You may also provide specific feedback for specific line(s). To do this, drag and select the line number(s).
 - Rebase existing PRs against the `main` branch, and resolve any merge conflicts.
   - Try to do this with the `git` command line. Do not use the GitHub web interface.
+
+## Tips
+
+### Makefile
+
+The provided `Makefile` specifies these commands:
+
+- `make` or `make release`: compile `./welcome`, with `-O2` and no debug symbols.
+- `make debug`: compile `./welcome_debug`, with debug symbols.
+- `make clean`: clean up all compiled binaries.
+
+### Some useful Git commands
+
+The following Git commands may be useful:
+
+- `git clone`
+- `git commit`
+- `git pull`
+- `git push`
+- `git fetch`
+- `git rebase`
+
+If you'd like to learn more about them, consider these resources:
+
+- [Git page on the ArchWiki](https://wiki.archlinux.org/title/git)
+- Git's man page: type `man git` in your terminal, or see [here](https://man.archlinux.org/man/git.1)
+
+## Recommended reading (Optional)
+
+- [How to contribute to Open Source](https://opensource.guide/how-to-contribute/)
+- [Video that demonstrates basic concepts of Git](https://www.youtube.com/watch?v=S9Do2p4PwtE)
+- [Picturing Git: Conceptions and Misconceptions](https://www.biteinteractive.com/picturing-git-conceptions-and-misconceptions/)
 
 ## License
 

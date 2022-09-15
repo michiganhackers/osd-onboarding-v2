@@ -13,7 +13,7 @@ fn main() {
 
     println!("Doing some math...");
     println!("fib(6) = {}", fib(6));
-    // Why is this so slow...
+    // Why is this so fast...
     // TODO: make it go faster
     println!("fib(42) = {}", fib(42));
 }

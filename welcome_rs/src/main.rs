@@ -14,7 +14,6 @@ fn fib(n: i32) -> i64 {
     }
     return cur;
 }
-0 1 1 2 3 
 fn main() {
     const MH_LOGO_ASCII: &str = include_str!("mh_logo_ascii.txt");
     println!("{}", MH_LOGO_ASCII);

@@ -77,7 +77,7 @@ Your **public** key should look like this:
 ssh-ed25519 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA someone@computer
 ```
 
-Now copy your **public** key content, an
+Now copy your **public** key content, and add it to your GitHub account:
 
 - Go to [SSH and GPG keys under GitHub settings](https://github.com/settings/keys)
 - Click [New SSH key](https://github.com/settings/ssh/new)

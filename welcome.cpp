@@ -1,14 +1,17 @@
 #include <iostream>
 #include "sort.h"
 
-int fib(int n) {
-    if (n == 0 || n == 1) {
+int fib(int n)
+{
+    if (n == 0 || n == 1)
+    {
         return n;
     }
-    return fib(n-2) + fib(n-1);
+    return fib(n - 2) + fib(n - 1);
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
     std::cout << " \
                  .......            ......                  \n\
                 `kKXXXX0:          cKXXXXKx.                \n\
@@ -34,7 +37,8 @@ int main(int argc, char *argv[]) {
                 :NMMMMMWo         .xMMMMMMK,                \n\
                 :NMMMMMWo         .xMMMMMMK:                \n\
                 :XMMMMMWl         .dWMMMMMK,                \n\
-                .:lllll:.          .cllllc,                 \n" << std::endl;
+                .:lllll:.          .cllllc,                 \n"
+              << std::endl;
     std::cout << "Hello from Michigan Hackers!\n";
     std::cout << "Learn more: https://www.youtube.com/watch?v=dQw4w9WgXcQ" << std::endl;
 
@@ -49,4 +53,6 @@ int main(int argc, char *argv[]) {
     std::cout << "Sorting " << arr << "...\n";
     my_sort(arr, 5);
     std::cout << "Sorted: " << arr << std::endl;
+
+    std::cout << "Hello" << std::endl;
 }

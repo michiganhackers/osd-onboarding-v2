@@ -4,6 +4,8 @@ Welcome to the Open Source Development team! This is our onboarding project, whi
 
 ~~F in chat for the old onboarding project~~
 
+This Project is an advanced mathematical calculator that performs a thorough analysis of a select number *n*. From determining evenness to finding the *n*th taxicab number, this program will uncover all you ever wanted to know and more.
+
 ## Table of contents <!-- omit in toc -->
 
 - [Getting started](#getting-started)

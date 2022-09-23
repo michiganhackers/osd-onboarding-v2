@@ -34,20 +34,20 @@ int main(int argc, char *argv[]) {
                 :NMMMMMWo         .xMMMMMMK,                \n\
                 :NMMMMMWo         .xMMMMMMK:                \n\
                 :XMMMMMWl         .dWMMMMMK,                \n\
-                .:lllll:.          .cllllc,                 \n" << std::endl;
+                .:lllll:.          .cllllc,                 \n" << "\n";
     std::cout << "Hello from Michigan Hackers!\n";
-    std::cout << "Learn more: https://www.youtube.com/watch?v=dQw4w9WgXcQ" << std::endl;
+    std::cout << "Learn more: https://www.youtube.com/watch?v=dQw4w9WgXcQ" << "\n";
 
     std::cout << "Doing some math...\n";
-    std::cout << "fib(6) = " << fib(6) << std::endl;
+    std::cout << "fib(6) = " << fib(6) << "\n";
     // Why is this so slow...
     // TODO: make it go faster
-    std::cout << "fib(42) = " << fib(42) << std::endl;
-
+    std::cout << "fib(42) = " << fib(42) << "\n";
+    std:: cout << "fib(80) = " << fib(80) << "\n";
     int arr[] = {5, 3, 9, 8, 3};
     // Why is it printing weird things...
     std::cout << "Sorting " << arr << "...\n";
     my_sort(arr, 5);
-    std::cout << "Sorted: " << arr << std::endl;
-    std::cout << "some changes ig" << std::endl;
+    std::cout << "Sorted: " << arr << "\n";
+    std::cout << "some changes ig" << "\n";
 }

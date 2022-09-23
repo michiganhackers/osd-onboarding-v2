@@ -1,5 +1,7 @@
 # Open Source Development Onboarding Project <!-- omit in toc -->
 
+joe makes a small edit
+
 Welcome to the Open Source Development team! This is our onboarding project, which is designed to demonstrate how you can learn more about and contribute to a typical open source project.
 
 ~~F in chat for the old onboarding project~~

@@ -39,11 +39,15 @@ int main(int argc, char *argv[]) {
     std::cout << "Learn more: https://www.youtube.com/watch?v=dQw4w9WgXcQ" << "\n";
 
     std::cout << "Doing some math...\n";
-    std::cout << "fib(6) = " << fib(6) << "\n";
     // Why is this so slow...
     // TODO: make it go faster
-    std::cout << "fib(42) = " << fib(42) << "\n";
-    std:: cout << "fib(80) = " << fib(80) << "\n";
+    std::cout << "Input your first favorite number: \n";
+    int inputNumber1, inputNumber2;
+    std::cin >> inputNumber1;
+    std::cout << "Input your second favorite number: \n";
+    std::cin >> inputNumber2;
+    std::cout << "fib(" << inputNumber1 << ") = " << fib(inputNumber1) << std::endl;
+    std::cout << "fib(" << inputNumber2 << ") = " << fib(inputNumber2) << std::endl;
     int arr[] = {5, 3, 9, 8, 3};
     // Why is it printing weird things...
     std::cout << "Sorting " << arr << "...\n";

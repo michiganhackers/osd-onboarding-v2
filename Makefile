@@ -8,4 +8,4 @@ debug: $(PROJ).cpp sort.cpp
 	$(CC) -g -o $(PROJ)_$@ -std=c++17 $+
 
 clean:
-	rm  -fv $(PROJ) $(PROJ)_debug
+	rm  -rfv $(PROJ) $(PROJ)_debug.dSYM $(PROJ)_debug

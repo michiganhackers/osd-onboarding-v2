@@ -1,11 +1,11 @@
-#include <iostream>
 #include "sort.h"
+#include <iostream>
 
 int fib(int n) {
     if (n == 0 || n == 1) {
         return n + 1;
     }
-    return fib(n-2) + fib(n-1);
+    return fib(n - 2) + fib(n - 1);
 }
 
 int main(int argc, char *argv[]) {
@@ -34,9 +34,10 @@ int main(int argc, char *argv[]) {
                 :NMMMMMWo         .xMMMMMMK,                \n\
                 :NMMMMMWo         .xMMMMMMK:                \n\
                 :XMMMMMWl         .dWMMMMMK,                \n\
-                .:lllll:.          .cllllc,                 \n" << "\n";
-    std::cout << "Hello from Michigan Hackers!\n";
-    std::cout << "Learn more: https://www.youtube.com/watch?v=dQw4w9WgXcQ" << "\n";
+                .:lllll:.          .cllllc,                 \n"
+              << "\n";
+    std::cout << "Hello from Michigan Hackers!\n"
+              << "Learn more: https://www.youtube.com/watch?v=dQw4w9WgXcQ\n";
 
     std::cout << "Doing some math...\n";
     // Why is this so slow...
@@ -49,13 +50,10 @@ int main(int argc, char *argv[]) {
     std::cout << "fib(" << inputNumber1 << ") = " << fib(inputNumber1) << std::endl;
     std::cout << "fib(" << inputNumber2 << ") = " << fib(inputNumber2) << std::endl;
     int arr[] = {5, 3, 9, 8, 3};
-    // Please decomment the section below
     // Why is it printing weird things...
-    /*std::cout << "Sorting " << arr << "...\n";
+    std::cout << "Sorting " << arr << "...\n";
     my_sort(arr, 5);
     std::cout << "Sorted: " << arr << "\n";
-    std::cout << "some changes ig" << "\n";*/
-
-    //Please delete the line below
+    // Please delete the line below
     std::cout << "Hello, this is Jackson!\n";
 }

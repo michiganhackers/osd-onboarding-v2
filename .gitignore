@@ -1,3 +1,6 @@
+# IDE config
+.vscode/settings.json
+
 # Mac stuff
 .DS_Store
 *.dSYM

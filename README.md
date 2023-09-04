@@ -6,21 +6,6 @@ Welcome to the Open Source Development team! This is our onboarding project, whi
 
 This Project is an advanced mathematical calculator that performs a thorough analysis of a select number *n*. From determining evenness to finding the *n*th taxicab number, this program will uncover all you ever wanted to know and more.
 
-## Table of contents <!-- omit in toc -->
-
-- [Getting started](#getting-started)
-  - [Install Git](#install-git)
-    - [Windows](#windows)
-    - [macOS](#macos)
-    - [Linux](#linux)
-  - [Add SSH key to GitHub](#add-ssh-key-to-github)
-- [Working on the onboarding project](#working-on-the-onboarding-project)
-- [Tips](#tips)
-  - [Makefile](#makefile)
-  - [Some useful Git commands](#some-useful-git-commands)
-- [Recommended reading (Optional)](#recommended-reading-optional)
-- [License](#license)
-
 ## Getting started
 
 ### Install Git
@@ -29,9 +14,7 @@ You need to have Git installed and set up on your computer.
 
 #### Windows
 
-You can either install [Git for Windows](https://git-scm.com/download/win), or [set up and use Git in WSL](https://eecs280staff.github.io/p1-stats/setup_wsl.html).
-
-It's very likely that you'll need a Linux environment at some point, so we recommend [setting up WSL](https://eecs280staff.github.io/p1-stats/setup_wsl.html) now.
+We recommend [setting up WSL](https://eecs280staff.github.io/p1-stats/setup_wsl.html) now, as it's very likely that you'll need a Linux environment at some point.
 
 #### macOS
 
@@ -51,53 +34,88 @@ The "Xcode Command Line Tools" comes with Git. To install it:
 
 Use your system's package manager (`apt`, `dnf`, `pacman`, etc) to install Git. The package is usually named `git`.
 
-### Add SSH key to GitHub
+### Set up GitHub CLI (`gh`)
 
-***If you already have an SSH key set up, skip this section.***
+The GitHub CLI makes it easy to interact with GitHub using the `git` command line interface. It logs you in to GitHub.com via your web browser, which means you don't need to manually set up SSH keys or generate Personal Access Tokens (PAT)!
 
-You should interact with GitHub using SSH. This will avoid many issues down the line.
+#### Install on Windows
 
-First, you need to generate an SSH key. If you already have one, you can reuse it. To generate a new key, run:
+In WSL (Ubuntu), run the following:
 
-```bash
-# You should have a passphrase for the SSH key. A passphrase helps prevent unauthorized use of your key.
-# You may leave everything as default.
-ssh-keygen -t ed25519
+```sh
+type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo apt update \
+&& sudo apt install gh -y
 ```
 
-Then, get the content of your **public** key:
+The commands above do the following:
 
-```bash
-# `cat` prints the content of a file
-# `~` refers to your home directory
-cat ~/.ssh/id_ed25519.pub
+- Install `curl` (a command-line HTTP client) if needed
+- Configure the `apt` repo, and download its signing key, for `gh`
+- Install `gh`
+
+#### Install on MacOS
+
+On MacOS, you should install `gh` using Homebrew:
+
+```sh
+brew install gh
 ```
 
-Your **public** key should look like this:
+If you don't have Homebrew installed ("command not found" when you run `brew`), you should install Homebrew:
 
-```none
-ssh-ed25519 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA someone@computer
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Now copy your **public** key content, and add it to your GitHub account:
+### Log in to GitHub
 
-- Go to [SSH and GPG keys under GitHub settings](https://github.com/settings/keys)
-- Click [New SSH key](https://github.com/settings/ssh/new)
-- Paste in the content of your **public** key into the "Key" field. Leave everything else as default.
-- Click "Add SSH key" and enter your password when prompted.
+Once you have `gh` installed, run:
+
+```sh
+$ gh auth login
+```
+
+You should see a prompt like this, and you should select options as shown here:
+
+```console
+$ gh auth login
+? What account do you want to log into? GitHub.com
+? You're already logged into github.com. Do you want to re-authenticate? Yes
+? What is your preferred protocol for Git operations? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Login with a web browser
+
+! First copy your one-time code: XXXX-XXXX
+Press Enter to open github.com in your browser...
+✓ Authentication complete.
+- gh config set -h github.com git_protocol https
+✓ Configured git protocol
+✓ Logged in as XXXX
+```
+
+When it asks you to
+
+> `Press Enter to open github.com in your browser...`
+
+Press Enter, and your browser should open. Paste the 8-character code shown in the prompt, sign in to your GitHub account, and click "Authorize."
 
 ## Working on the onboarding project
 
 There are many things you can do with the onboarding project. At minimum, you should:
 
-- Take a look at existing Issues and Pull Requests (PR).
-- Look at the source code, compile, and run it. Use the provided Makefile.
+- Locate and take a look at existing Issues and Pull Requests (PR).
 - Fork the repo, and clone your fork to your computer.
-- Make a minor change to `welcome.cpp` or `README.md`, then commit and push your changes using the `git` command line.
-  - Do not edit any file with the GitHub web interface!
+- Look at the source code, compile, and run it. Use the provided Makefile.
+- Make a minor change to any existing file, then commit and push your changes using the `git` command line.
+  - A "minor change" could be anything! For example, you may add a few words to the README, or add a `print()` statement to `welcome.py`.
+  - Do not edit files with the GitHub web interface!
 - Submit a PR with your changes.
   - Provide a descriptive title and description.
-  - A good title/descrition should clearly state what you changed.
+  - A good title/description should clearly state what you changed.
 
 You may also:
 
@@ -136,7 +154,7 @@ If you'd like to learn more about them, consider these resources:
 - [Git page on the ArchWiki](https://wiki.archlinux.org/title/git)
 - Git's man page: type `man git` in your terminal, or see [here](https://man.archlinux.org/man/git.1)
 
-## Recommended reading (Optional)
+## Recommended reading
 
 - [How to contribute to Open Source](https://opensource.guide/how-to-contribute/)
 - [Video that demonstrates basic concepts of Git](https://www.youtube.com/watch?v=S9Do2p4PwtE)

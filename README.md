@@ -38,9 +38,13 @@ Use your system's package manager (`apt`, `dnf`, `pacman`, etc) to install Git. 
 
 The GitHub CLI makes it easy to interact with GitHub using the `git` command line interface. It logs you in to GitHub.com via your web browser, which means you don't need to manually set up SSH keys or generate Personal Access Tokens (PAT)!
 
-#### Install on Windows
+#### Install on Windows or Linux
 
-In WSL (Ubuntu), run the following:
+Refer to GitHub's documentation on installing `gh`: <https://github.com/cli/cli/blob/trunk/docs/install_linux.md>
+
+On Windows, you should use WSL and follow the instruction in your WSL terminal. 
+
+If you're on Ubuntu (including WSL), you may run:
 
 ```sh
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
@@ -57,6 +61,7 @@ The commands above do the following:
 - Configure the `apt` repo, and download its signing key, for `gh`
 - Install `gh`
 
+
 #### Install on MacOS
 
 On MacOS, you should install `gh` using Homebrew:
@@ -65,11 +70,7 @@ On MacOS, you should install `gh` using Homebrew:
 brew install gh
 ```
 
-If you don't have Homebrew installed ("command not found" when you run `brew`), you should install Homebrew:
-
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+If you don't have Homebrew installed ("command not found" when you run `brew`), you should install Homebrew. Refer to <https://brew.sh> for instructions.
 
 ### Log in to GitHub
 
@@ -151,6 +152,7 @@ The following Git commands may be useful:
 
 If you'd like to learn more about them, consider these resources:
 
+- [Learn Git Branching (interactive tutorial)](https://learngitbranching.js.org/)
 - [Git page on the ArchWiki](https://wiki.archlinux.org/title/git)
 - Git's man page: type `man git` in your terminal, or see [here](https://man.archlinux.org/man/git.1)
 

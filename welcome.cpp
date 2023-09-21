@@ -54,6 +54,7 @@ int main(int argc, char *argv[]) {
     std::cout << "Sorting " << arr << "...\n";
     my_sort(arr, 5);
     std::cout << "Sorted: " << arr << "\n";
-    // Please delete the line below
-    std::cout << "Hello, this is Jackson!\n";
+    std::cout << "Hello, this is Leon!\n";
+    my_sort(arr, 7);
+    std::cout << "Sorted: " << arr << "\n";
 }

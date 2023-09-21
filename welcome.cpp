@@ -45,8 +45,18 @@ int main(int argc, char *argv[]) {
     std::cout << "Input your first favorite number: \n";
     int inputNumber1, inputNumber2;
     std::cin >> inputNumber1;
+    while(inputNumber1 > 25) {
+        std::cout << "no." << std::endl;
+        std::cout << "Try again." << std::endl;
+        std::cin >> inputNumber1;
+    }
     std::cout << "Input your second favorite number: \n";
     std::cin >> inputNumber2;
+    while(inputNumber2 > 25) {
+        std::cout << "stop it." << std::endl;
+        std::cout << "Try again." << std::endl;
+        std::cin >> inputNumber2;
+    }
     std::cout << "fib(" << inputNumber1 << ") = " << fib(inputNumber1) << std::endl;
     std::cout << "fib(" << inputNumber2 << ") = " << fib(inputNumber2) << std::endl;
     int arr[] = {5, 3, 9, 8, 3};

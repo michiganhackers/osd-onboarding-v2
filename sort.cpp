@@ -23,6 +23,8 @@ void shuffle(int *arr, int n) {
 
 void my_sort(int *arr, int n) {
    while (!is_sorted(arr, n)) {
-      shuffle(arr, n);
+      for (int i = 0; i < n; i++) {
+         shuffle(arr, n);
+      }
    }
 }

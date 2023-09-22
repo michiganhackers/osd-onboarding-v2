@@ -38,7 +38,6 @@ int main(int argc, char *argv[]) {
             << "\n";
   std::cout << "Hello from Michigan Hackers!\n"
             << "Learn more: https://www.youtube.com/watch?v=dQw4w9WgXcQ\n";
-
   std::cout << "Doing some math...\n";
   // Why is this so slow...
   // TODO: make it go faster
@@ -62,4 +61,7 @@ int main(int argc, char *argv[]) {
   |  O        \___/  |
 ~^~^~^~^~^~^~^~^~^~^~^~^~
 )" << '\n';
+  std::cout << "Hello, this is Leon!\n";
+  my_sort(arr, 7);
+  std::cout << "Sorted: " << arr << "\n";
 }

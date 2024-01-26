@@ -8,6 +8,11 @@ int fib(int n) {
   return fib(n - 2) + fib(n - 1);
 }
 
+bool isEven(int n) {
+  if (n % 2 == 0) { return true; }
+  else { return false; }
+}
+
 int main(int argc, char *argv[]) {
   std::cout << " \
                  .......            ......                  \n\
@@ -64,4 +69,5 @@ int main(int argc, char *argv[]) {
   std::cout << "Hello, this is Leon!\n";
   my_sort(arr, 7);
   std::cout << "Sorted: " << arr << "\n";
+  std::cout << "Learn more: https://www.youtube.com/watch?v=79-AwFZCKpA" << "\n";
 }

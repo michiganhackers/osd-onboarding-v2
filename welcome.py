@@ -41,6 +41,12 @@ def fib(n: int):
     return round(numerator / denom)
 
 
+def is_even(n: int):
+    """Print whether n is even or not."""
+    if n % 2:
+        return 'not even :('
+    return 'EVEN!'
+
 print(MH_ASCII_ART)
 print('Hello from Michigan Hackers!')
 print('Learn more: https://www.youtube.com/watch?v=dQw4w9WgXcQ')
@@ -49,3 +55,6 @@ num2 = int(input("input your 2nd favorite number: "))
 print('Doing some math...')
 print(f'fib({num1}) = {fib(num1)}')
 print(f'fib({num2}) = {fib(num2)}')
+print('The magical numbers 6 and 42 are... EVEN!')
+num3 = int(input('Give me another number and I will tell you if it is even: '))
+print(f'{num3} is... {is_even(num3)}')

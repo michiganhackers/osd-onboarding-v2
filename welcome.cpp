@@ -1,11 +1,22 @@
 #include "sort.h"
 #include <iostream>
+#include <string.h>
 
 int fib(int n) {
   if (n == 0 || n == 1) {
     return n + 1;
   }
   return fib(n - 2) + fib(n - 1);
+}
+
+string print_arr(int* arr, int size){
+  string dummy =  "[" + to_string(*arr);
+  for (int i = 1; i < size; ++i) {
+      dummy +=  ", " + to_string(*(arr+i));
+  }
+
+  dummy += "]";
+  return dummy;
 }
 
 int main(int argc, char *argv[]) {
@@ -50,9 +61,10 @@ int main(int argc, char *argv[]) {
   std::cout << "fib(" << inputNumber2 << ") = " << fib(inputNumber2) << std::endl;
   int arr[] = {5, 3, 9, 8, 3};
   // Why is it printing weird things...
-  std::cout << "Sorting " << *arr << "...\n";
+  int size = sizeof(arr) / sizeof(arr[0]);
+  std::cout << "Sorting " << print_arr(arr, size) << "...\n";
   my_sort(arr, 5);
-  std::cout << "Sorted: " << *arr << "...\n";
+  std::cout << "Sorted: " << print_arr(arr, size) << "...\n";
   std::cout << "Enjoy this whale\n";
   std::cout << R"(       .
       ":"
@@ -63,5 +75,5 @@ int main(int argc, char *argv[]) {
 )" << '\n';
   std::cout << "Hello, this is Leon!\n";
   my_sort(arr, 7);
-  std::cout << "Sorted: " << arr << "\n";
+  std::cout << "Sorted: " << print_arr(arr, size) << "\n";
 }

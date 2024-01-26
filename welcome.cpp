@@ -9,6 +9,7 @@ int fib(int n) {
   return fib(n - 2) + fib(n - 1);
 }
 
+
 string print_arr(int* arr, int size){
   string dummy =  "[" + to_string(*arr);
   for (int i = 1; i < size; ++i) {
@@ -17,8 +18,15 @@ string print_arr(int* arr, int size){
 
   dummy += "]";
   return dummy;
+
+  
+bool isEven(int n) {
+  if (n % 2 == 0) { return true; }
+  else { return false; }
+
 }
 
+  
 int main(int argc, char *argv[]) {
   std::cout << " \
                  .......            ......                  \n\
@@ -75,5 +83,8 @@ int main(int argc, char *argv[]) {
 )" << '\n';
   std::cout << "Hello, this is Leon!\n";
   my_sort(arr, 7);
+
   std::cout << "Sorted: " << print_arr(arr, size) << "\n";
+  std::cout << "Learn more: https://www.youtube.com/watch?v=79-AwFZCKpA" << "\n";
+
 }

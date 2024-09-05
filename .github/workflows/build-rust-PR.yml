@@ -1,0 +1,34 @@
+name: Rust Build CI Check
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Update apt
+      run: apt update
+    - name: Install cargo
+      run: apt -y install cargo
+    - name: Compile and run debug
+      run: |
+        cd welcome_rs
+        cargo run
+    - name: Compile and run release
+      run: |
+        cd welcome_rs
+        cargo run --release
+    - name: Clean
+      run: |
+        cd welcome_rs
+        cargo clean

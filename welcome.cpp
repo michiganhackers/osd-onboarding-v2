@@ -18,7 +18,7 @@ string print_arr(int* arr, int size){
 
   dummy += "]";
   return dummy;
-
+}
   
 bool isEven(int n) {
   if (n % 2 == 0) { return true; }

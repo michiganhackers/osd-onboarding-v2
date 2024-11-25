@@ -1,5 +1,5 @@
 CC=g++
-PROJ=welcome
+PROJ=main
 
 release: $(PROJ).cpp sort.cpp
 	$(CC) -O2 -o $(PROJ) -std=c++17 $+

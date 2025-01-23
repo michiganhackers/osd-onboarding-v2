@@ -34,7 +34,7 @@ The "Xcode Command Line Tools" comes with Git. To install it:
 
 Use your system's package manager (`apt`, `dnf`, `pacman`, etc) to install Git. The package is usually named `git`.
 
-### Set up GitHub CLI (`gh`)
+### Set up GitHub CLI (`gh`) ** This is optional and not necessary **
 
 The GitHub CLI makes it easy to interact with GitHub using the `git` command line interface. It logs you in to GitHub.com via your web browser, which means you don't need to manually set up SSH keys or generate Personal Access Tokens (PAT)!
 

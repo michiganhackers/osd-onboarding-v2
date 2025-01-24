@@ -16,6 +16,7 @@ void shuffle(int *arr, int n) {
    for(int i=0; i < n; i++) {
       temp = arr[i];
       r = rand() % n;
+      cout << "The random number is " << r << endl;
       arr[i] = arr[r];
       arr[r] = temp;
    }
